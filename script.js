@@ -8,6 +8,10 @@ const btn5 = document.querySelector(".btn.time5");
 const btn10 = document.querySelector(".btn.time10");
 const btn15 = document.querySelector(".btn.time15");
 
+const lista = document.querySelector("#listanombres");
+const btnrandom = document.querySelector(".btnrandom");
+
+console.log(lista)
 pause.hidden = true;
 
 let startingMinutes = parseInt(minutes.textContent);
@@ -54,6 +58,14 @@ function reinit(){
     PauseCount();
     minutes.textContent = startingMinutes.toString().padStart(2, "0");
     seconds.textContent ="00";
+
+}
+
+function listarandom() {
+    let listainicial = lista.value.split("\n");
+    const listafinal = listainicial.sort(function() {return Math.random()-0.5;});
+    lista.value = listafinal.join("\n");
+    console.table(listafinal);
 }
 
 start.addEventListener("click", CountDown);
@@ -72,6 +84,6 @@ btn15.addEventListener("click",function (){
     changeTimeInit(15);
 },false);
 
-
+btnrandom.addEventListener("click", listarandom);
 //window.setInterval(function() {console.log("HOLA");},500)
 

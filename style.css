@@ -49,3 +49,8 @@ p{
 .stop{
     background: #ff0256;
 }
+
+.lista{
+    display: flex;
+    flex-direction: column;
+}
