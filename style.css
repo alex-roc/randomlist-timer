@@ -1,0 +1,51 @@
+body {
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+p{
+    background-color: white;
+    font-size: 50px;
+    
+}
+
+.timer, .setime{
+    font-family: sans-serif;
+    display: flex;
+    padding: 24px 32px;
+    border-radius: 30px;
+    background: white;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px;
+    
+    
+  
+}
+
+.timerpart{
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.btn{
+    width: 50px;
+    height: 50px;
+    margin-left: 16px;
+    border-radius: 50%;
+    border:none;
+    color: white;
+    background: #8208e6;
+    cursor: pointer;
+}
+
+.start{
+    background: #00b84c;
+}
+
+.stop{
+    background: #ff0256;
+}
