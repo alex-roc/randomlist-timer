@@ -1,56 +1,167 @@
+html {
+    height: 100%;
+}
 body {
-    background-color: gray;
+    background-color: #4788FE;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    margin:0;
+
+}
+
+.sidebar {
+    display:flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin:0px;
+    align-items: center;
+    
+    background-color: #246bf0;
+    
+}
+
+
+.setime {
+    font-family: sans-serif;
     display: flex;
     flex-direction: column;
+    padding: 24px 32px;
+    border-radius: 30px;
+    background: white;
+    margin: 20px;
+    max-width: 30%;
     align-items: center;
     
 }
 
-p{
-    background-color: white;
-    font-size: 50px;
-    
+.sidebar .setime .btn {
+    width: 100px;
+    height: 100px;
+    background-color: #7729FF;
 }
 
-.timer, .setime{
+.lista{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    color: white;
+    text-align: center;
+}
+
+.rightbar{
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.timer{
+
     font-family: sans-serif;
     display: flex;
     padding: 24px 32px;
     border-radius: 30px;
     background: white;
     justify-content: space-around;
+    max-width: 90%;
+    margin: 0px;
     align-items: center;
-    margin: 20px;
-    
-    
-  
+
 }
 
 .timerpart{
-    font-size: 36px;
+    font-size: 200px;
     font-weight: bold;
+    color: rgb(53, 48, 48);
 }
 
 .btn{
-    width: 50px;
-    height: 50px;
-    margin-left: 16px;
+    width: 200px;
+    height: 200px;
+    margin: 16px;
     border-radius: 50%;
     border:none;
     color: white;
-    background: #8208e6;
+    text-align: center;
+    background: #FF426F;
     cursor: pointer;
+    font-size:32px;
 }
 
 .start{
-    background: #00b84c;
+    background: #40E681;
 }
 
 .stop{
-    background: #ff0256;
+    background: #E68E40
+}
+.btn .material-icons {
+    font-size: 120px;
+    
 }
 
-.lista{
+.namebuttons {
+    
     display: flex;
     flex-direction: column;
+    max-width: 80%;
+
+
+}
+.nombre{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin:0;
+    font-size: 200px;
+    color: white;
+}
+
+.botonNombre, .btnrandom{
+    align-items: center;
+    background-clip: padding-box;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 1.25;
+    margin: 0;
+    min-height: 3rem;
+    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+    position: relative;
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    width: auto;
+    background-color: #0fb44f;
+}
+.botonNombre:hover{
+    background-color:orange;
+  }
+  
+.botonNombre:focus{
+    background-color:red;
+  }
+
+.btnrandom {
+    background-color:  #005EFE;
+}
+
+textarea{
+    font-family: Tahoma, sans-serif;
+    font-size: 24px;
+    padding: 10px;
+    color: rgb(53, 48, 48);
 }

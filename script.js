@@ -66,6 +66,24 @@ function listarandom() {
     const listafinal = listainicial.sort(function() {return Math.random()-0.5;});
     lista.value = listafinal.join("\n");
     console.table(listafinal);
+    const namebuttons = document.querySelector(".namebuttons");
+    const nombre = document.querySelector(".nombre");
+
+    while(namebuttons.lastChild){
+        namebuttons.removeChild(namebuttons.lastChild);
+    }
+    for (let i=0; i<listainicial.length; i++){
+        const nbutton = document.createElement("button");
+        nbutton.textContent = listafinal[i];
+        nbutton.classList.add("botonNombre");
+        namebuttons.appendChild(nbutton);
+        
+        nbutton.addEventListener("click", function(e) {
+            console.log(e.target.textContent);
+            console.log(nombre);
+            nombre.textContent = e.target.textContent;
+        })
+    }
 }
 
 start.addEventListener("click", CountDown);
