@@ -4,6 +4,7 @@ const start = document.querySelector(".btn.control.start");
 const pause = document.querySelector(".btn.control.pause");
 const reset = document.querySelector(".btn.reset");
 
+const btn3 = document.querySelector(".btn.time3");
 const btn5 = document.querySelector(".btn.time5");
 const btn10 = document.querySelector(".btn.time10");
 const btn15 = document.querySelector(".btn.time15");
@@ -58,6 +59,7 @@ function reinit(){
     PauseCount();
     minutes.textContent = startingMinutes.toString().padStart(2, "0");
     seconds.textContent ="00";
+    timeSeconds=startingMinutes*60;
 
 }
 
@@ -89,6 +91,10 @@ function listarandom() {
 start.addEventListener("click", CountDown);
 pause.addEventListener("click", PauseCount);
 reset.addEventListener("click", reinit)
+
+btn3.addEventListener("click",function (){
+    changeTimeInit(3);
+},false);
 
 btn5.addEventListener("click",function (){
     changeTimeInit(5);
