@@ -1,65 +1,69 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-	<link >
-    <link rel = "stylesheet" href = "style.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>Counter</title>
 
-    <style> </style>
-  </head>
+<head>
+  <meta charset="utf-8">
+  <link>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Counter</title>
 
-  <body>
-    
-    <div class="sidebar">
-      
-      <div class="setime">
-        <button type="button" class="btn time3">3 min</button>
-        <button type="button" class="btn time5">5 min</button>
-        <button type="button" class="btn time10">10 min</button>
-        <button type="button" class="btn time15">15 min</button>
-      </div>
+  <style> </style>
+</head>
 
-      <div class="lista">
-        <label for ="listanombres"> Names here</label>
-        <textarea id="listanombres" name="listanombres" rows="7" cols="40"></textarea>
-        <button type="button" class="btnrandom">Random Mix</button>
-      </div>
+<body>
 
-      <div class="namebuttons">
-        
-      </div>
+  <div class="sidebar">
+
+    <div class="setime">
+      <label for="setminutes-pr">Presentation minutes</label>
+      <input type="number" id="setminutes-pr" name="setminutes-pr" min="0" max="60" value="10">
+      <label for="setminutes-fb">Feedback minutes</label>
+      <input type="number" id="setminutes-fb" name="setminutes-fb" min="0" max="60" value="5">
+      <button type="button" class="btn settime" id="btn-setminutes">Set</button>
+    </div>
+
+
+    <div class="lista">
+      <label for="listanombres"> Names here</label>
+      <textarea id="listanombres" name="listanombres" rows="7" cols="40"></textarea>
+      <button type="button" class="btnrandom">Random Mix</button>
+    </div>
+
+    <div class="namebuttons">
 
     </div>
 
-    
-    <div class="rightbar">
-      <div class="timer">
-        <span class = "timerpart minutes">05</span>
-        <span class = "timerpart">:</span>
-        <span class = "timerpart seconds">00</span>
+  </div>
 
-        <button type="button" class="btn control start">
-            <span class="material-icons">play_arrow</span>
-        </button>
 
-        <button type="button" class="btn control pause">
-            <span class="material-icons">pause</span>
-        </button>
+  <div class="rightbar">
+    <div class="timer">
+      <span class="timerpart minutes">05</span>
+      <span class="timerpart">:</span>
+      <span class="timerpart seconds">00</span>
 
-        <button type="button" class="btn reset">
-            <span class="material-icons">timer</span>
-        </button>
-      </div>
+      <button type="button" class="btn control start">
+        <span class="material-icons">play_arrow</span>
+      </button>
 
-      <p class="nombre">
-        Lecturer
-      </p>
-      
+      <button type="button" class="btn control pause">
+        <span class="material-icons">pause</span>
+      </button>
 
+      <button type="button" class="btn reset">
+        <span class="material-icons">timer</span>
+      </button>
     </div>
+
+    <p class="nombre">
+      Lecturer
+    </p>
+
+
+  </div>
 </body>
 
 <script src="./script.js"></script>
+
 </html>
