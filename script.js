@@ -20,6 +20,7 @@ let startingMinutes = parseInt(minutes.textContent);
 let timeSeconds = startingMinutes * 60;
 let tempo;
 
+let timePresentation = 0;
 let timeFeedback = 0;
 
 function updateCountDown() {
@@ -128,6 +129,7 @@ btnrandom.addEventListener("click", listarandom);
 
 btnSetminutes.addEventListener("click", function () {
     console.log("set");
-    changeTimeInit(parseInt(document.querySelector("#setminutes-pr").value));
+    timePresentation = parseInt(document.querySelector("#setminutes-pr").value)
     timeFeedback = parseInt(document.querySelector("#setminutes-fb").value);
+    changeTimeInit(timePresentation + timeFeedback);
 }, false);
